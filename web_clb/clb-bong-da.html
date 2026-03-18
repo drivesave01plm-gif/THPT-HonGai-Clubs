@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLB Bóng Đá - THPT Hòn Gai</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    /* CSS bổ sung để tối ưu hiệu ứng Glow và Gallery cho trang con */
+    .banner {
+      height: 70vh;
+      background: linear-gradient(rgba(7, 13, 36, 0.3), rgba(7, 13, 36, 0.7)), 
+                  url('../pic/bong_da.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Chữ sáng + Glow rực rỡ */
+    .banner h1 {
+      font-size: clamp(3rem, 10vw, 5rem);
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px var(--primary), 0 0 30px var(--primary), 0 0 50px rgba(75, 138, 255, 0.5);
+      letter-spacing: 5px;
+    }
+
+    .banner p {
+      font-size: 1.5rem;
+      color: var(--secondary);
+      font-weight: 600;
+      text-shadow: 0 0 10px var(--secondary);
+      letter-spacing: 2px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      border-left: 5px solid var(--primary);
+      padding-left: 15px;
+    }
+
+    /* List Hoạt động */
+    .activity-list { list-style: none; }
+    .activity-list li {
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+    }
+    .activity-list li::before {
+      content: '✔';
+      color: var(--secondary);
+      margin-right: 15px;
+      font-weight: bold;
+    }
+
+    /* Gallery Pro - Hover Zoom */
+    .pro-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .pro-gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      border: 1px solid var(--glass-border);
+    }
+    .pro-gallery img:hover {
+      transform: scale(1.05) rotate(1deg);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5), var(--glow);
+      filter: brightness(1.1);
+    }
+
+    /* Video Embed */
+    .video-container {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glow);
+    }
+    .video-container iframe { width: 100%; aspect-ratio: 16/9; display: block; }
+
+    /* Layout Thành viên */
+    .board-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+    .member-card { text-align: center; }
+    .member-card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid var(--primary);
+      padding: 5px;
+    }
+
+    /* Form Đăng ký Glassmorphism */
+    .registration-box {
+      background: var(--card-bg);
+      backdrop-filter: blur(15px);
+      padding: 3rem;
+      border-radius: 25px;
+      border: 1px solid var(--glass-border);
+    }
+
+    /* Link liên hệ footer */
+    .contact-links a {
+      color: var(--secondary);
+      text-decoration: none;
+      margin-right: 20px;
+      transition: 0.3s;
+    }
+    .contact-links a:hover { text-shadow: var(--glow); }
+  </style>
+</head>
+<body>
+
+  <header class="banner">
+    <div class="hero-content">
+      <h1>CLB BÓNG ĐÁ</h1>
+      <p>Cháy hết mình - Chiến thắng mọi sân cỏ</p>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 4rem 0;">
+    
+    <section style="margin-bottom: 4rem;">
+      <h2 class="section-title">Giới thiệu</h2>
+      <p style="font-size: 1.2rem; color: var(--muted); max-width: 800px;">
+        Câu lạc bộ Bóng đá THPT Hòn Gai là sân chơi cho các bạn học sinh đam mê trái bóng tròn. 
+        Chúng mình tập trung rèn luyện kỹ thuật, chiến thuật và xây dựng tinh thần đồng đội bền vững. 
+        Dành cho tất cả nam nữ học sinh có chung nhịp đập với túc cầu giáo.
+      </p>
+    </section>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 4rem;">
+      <section>
+        <h2 class="section-title">Hoạt động chính</h2>
+        <ul class="activity-list">
+          <li>Tập luyện hàng tuần vào chiều Thứ 7</li>
+          <li>Giao hữu định kỳ với các trường bạn</li>
+          <li>Tổ chức Giải bóng đá cấp trường thường niên</li>
+          <li>Workshop về chiến thuật và sức khỏe thể thao</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="section-title">Ban chủ nhiệm</h2>
+        <div class="board-grid">
+          <div class="member-card">
+            <img src="../pic/bong_da.jpg" alt="Chủ nhiệm">
+            <h4>Nguyễn Văn A</h4>
+            <p style="color: var(--secondary);">Chủ nhiệm</p>
+          </div>
+          <div class="member-card">
+            <img src="../pic/bong_da.jpg" alt="Phó chủ nhiệm">
+            <h4>Trần Thị B</h4>
+            <p style="color: var(--secondary);">Phó chủ nhiệm</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section style="margin-bottom: 4rem;">
+      <h2 class="section-title">Khoảnh khắc nổi bật</h2>
+      <div class="pro-gallery">
+        <img src="../pic/bong_da.jpg" alt="Match 1">
+        <img src="../pic/bong_da.jpg" alt="Match 2">
+        <img src="../pic/bong_da.jpg" alt="Match 3">
+        <img src="../pic/bong_da.jpg" alt="Match 4">
+      </div>
+    </section>
+
+    <section style="margin-bottom: 4rem;">
+      <h2 class="section-title">Video hoạt động</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+<section id="registration" style="margin-bottom: 4rem;">
+  <h2 class="section-title">Gia nhập đội hình</h2>
+
+  <!-- thêm viền + glass -->
+
+  <div class="registration-box" 
+       style="
+         border: 1px solid rgba(120,170,255,0.35);
+         border-radius: 16px;
+         padding: 20px;
+         background: rgba(20,35,70,0.6);
+         backdrop-filter: blur(8px);
+         box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+       ">
+
+
+<form id="clbRegister">
+  
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+    <input type="text" placeholder="Họ và tên" required
+      style="padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(120,170,255,0.3); border-radius: 10px; color: #fff;">
+    
+    <input type="text" placeholder="Lớp" required
+      style="padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(120,170,255,0.3); border-radius: 10px; color: #fff;">
+  </div>
+
+  <input type="text" placeholder="Số điện thoại / Facebook" required
+    style="width: 100%; padding: 12px; margin-top: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(120,170,255,0.3); border-radius: 10px; color: #fff;">
+
+  <textarea placeholder="Lý do bạn muốn tham gia CLB?" rows="4"
+    style="width: 100%; padding: 12px; margin-top: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(120,170,255,0.3); border-radius: 10px; color: #fff;"></textarea>
+
+  <button type="submit"
+    style="width: 100%; padding: 15px; margin-top: 20px; background: var(--primary); color: #fff; border: none; border-radius: 10px; font-weight: 800; cursor: pointer; transition: 0.3s;">
+    GỬI ĐƠN ĐĂNG KÝ
+  </button>
+
+</form>
+
+
+  </div>
+</section>
+
+
+<section style="text-align: center; margin-top: 4rem; padding-bottom: 3rem;">
+      <h2 class="section-title" style="border: none; padding: 0; margin-bottom: 1.5rem;">Kết nối với chúng mình</h2>
+      <div class="contact-links">
+        <a href="#" class="contact-item">🔵 Facebook CLB</a>
+        <a href="#" class="contact-item">📸 Instagram</a>
+        <a href="mailto:clb.bongda@hongai.edu.vn" class="contact-item">📧 clb.truyenthong@hongai.edu.vn</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="text-align: center; padding: 3rem; border-top: 1px solid var(--glass-border);">
+    <p>© 2026 CLB Bóng Đá - THPT Hòn Gai | <a href="../index.html" style="color: var(--primary);">Quay lại trang chủ</a></p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

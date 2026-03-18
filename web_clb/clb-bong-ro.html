@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLB Bóng Rổ - THPT Hòn Gai</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    .banner { height: 75vh; background: linear-gradient(rgba(7, 13, 36, 0.4), rgba(7, 13, 36, 0.8)), url('../pic/bong_ro.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .banner h1 { font-size: clamp(3rem, 10vw, 5.5rem); color: #fff; text-transform: uppercase; text-shadow: 0 0 15px #ff6b00, 0 0 30px #ff6b00; letter-spacing: 4px; }
+    .banner p { font-size: 1.4rem; color: #ff9d5c; font-weight: 600; text-shadow: 0 0 10px rgba(0,0,0,0.8); }
+    .section-title { font-size: 2.2rem; margin-bottom: 2rem; color: #fff; border-left: 6px solid #ff6b00; padding-left: 20px; }
+    .activity-list li::before { content: '🏀'; margin-right: 15px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; }
+    .gallery-item { border-radius: 20px; overflow: hidden; height: 300px; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s cubic-bezier(0.33, 1, 0.68, 1); }
+    .gallery-item:hover img { transform: scale(1.15); filter: contrast(1.1); }
+    .video-box { border-radius: 25px; overflow: hidden; border: 2px solid #ff6b00; }
+    .video-box iframe { width: 100%; aspect-ratio: 16/9; display: block; }
+    .form-box { background: rgba(255, 107, 0, 0.05); padding: 3rem; border-radius: 25px; border: 1px solid #ff6b00; }
+    input, textarea { width: 100%; padding: 12px; margin-top: 10px; background: #000; border: 1px solid #ff6b00; border-radius: 8px; color: #fff; }
+    .btn-submit { width: 100%; padding: 15px; margin-top: 20px; background: #ff6b00; color: #fff; border: none; border-radius: 10px; font-weight: 800; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <header class="banner">
+    <div>
+      <h1>BASKETBALL CLUB</h1>
+      <p>Rise Above The Rim</p>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 5rem 0;">
+    
+    <section style="margin-bottom: 5rem;">
+      <h2 class="section-title">Giới thiệu</h2>
+      <p style="font-size: 1.2rem; color: var(--muted);">
+        CLB Bóng rổ Hòn Gai là cộng đồng dành cho những baller thực thụ. 
+        Môi trường năng động, trẻ trung, tập trung vào kỹ năng cá nhân và chiến thuật đội hình chuyên nghiệp.
+      </p>
+    </section>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 5rem;">
+      <section>
+        <h2 class="section-title">Hoạt động</h2>
+        <ul style="list-style: none;" class="activity-list">
+          <li style="margin-bottom: 10px;">✔ Tập luyện tại sân trường mỗi chiều thứ 5</li>
+          <li style="margin-bottom: 10px;">✔ Tham gia các giải đấu 3x3 và 5x5</li>
+          <li style="margin-bottom: 10px;">✔ Workshop cùng các huấn luyện viên chuyên nghiệp</li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="section-title">Ban điều hành</h2>
+        <div style="display: flex; gap: 20px; text-align: center;">
+          <div><img src="../pic/bong_ro.jpg" style="width: 120px; height: 120px; border-radius: 15px; border: 2px solid #ff6b00;"><p>Captain</p></div>
+          <div><img src="../pic/bong_ro.jpg" style="width: 120px; height: 120px; border-radius: 15px; border: 2px solid #ff6b00;"><p>Vice Captain</p></div>
+        </div>
+      </section>
+    </div>
+
+    <section style="margin-bottom: 5rem;">
+      <h2 class="section-title">Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="../pic/bong_ro.jpg"></div>
+        <div class="gallery-item"><img src="../pic/bong_ro.jpg"></div>
+        <div class="gallery-item"><img src="../pic/bong_ro.jpg"></div>
+      </div>
+    </section>
+
+    <section style="margin-bottom: 5rem;">
+      <h2 class="section-title">Video Highlights</h2>
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/XpS6fMvY0U0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="form-box">
+      <h2>Đăng ký tuyển thành viên</h2>
+      <form>
+        <input type="text" placeholder="Họ và tên" required>
+        <input type="text" placeholder="Lớp" required>
+        <input type="text" placeholder="Vị trí sở trường (PG/SG/SF/PF/C)" required>
+        <textarea rows="4" placeholder="Tại sao bạn muốn gia nhập đội bóng?"></textarea>
+        <button type="submit" class="btn-submit">SUBMIT APPLICATION</button>
+      </form>
+    </section>
+
+<section style="text-align: center; margin-top: 4rem; padding-bottom: 3rem;">
+      <h2 class="section-title" style="border: none; padding: 0; margin-bottom: 1.5rem;">Kết nối với chúng mình</h2>
+      <div class="contact-links">
+        <a href="#" class="contact-item">🔵 Facebook CLB</a>
+        <a href="#" class="contact-item">📸 Instagram</a>
+        <a href="mailto:clb.bongro@hongai.edu.vn" class="contact-item">📧 clb.truyenthong@hongai.edu.vn</a>
+      </div>
+    </section>
+
+    <footer style="margin-top: 5rem; text-align: center;">
+      <p>FB: fb.com/hongai.basketball | Hotline: 0123 456 789</p>
+      <p style="margin-top: 1rem;"><a href="../index.html" style="color: #ff6b00;">← Quay lại Trang chủ</a></p>
+    </footer>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLB Sách & Phim - THPT Hòn Gai</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    .banner { height: 70vh; background: linear-gradient(rgba(7, 13, 36, 0.5), rgba(7, 13, 36, 0.8)), url('../pic/sach_va_phim.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .banner h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); color: #fff; text-transform: uppercase; text-shadow: 0 0 20px #ff9800, 0 0 40px rgba(255, 152, 0, 0.5); letter-spacing: 3px; }
+    .banner p { font-size: 1.4rem; color: #ffeb3b; font-weight: 600; text-shadow: 0 0 10px rgba(0,0,0,0.8); }
+    .section-title { font-size: 2rem; margin-bottom: 1.5rem; color: #fff; border-left: 5px solid #ff9800; padding-left: 15px; }
+    .activity-list li::before { content: '🎬'; margin-right: 15px; }
+    .pro-gallery img:hover { transform: scale(1.08); box-shadow: 0 0 25px #ff9800; }
+    .registration-box { border: 1px solid #ff9800; background: rgba(255, 152, 0, 0.05); padding: 2rem; border-radius: 20px; }
+    .video-container { border-radius: 20px; overflow: hidden; border: 1px solid #ff9800; }
+  </style>
+</head>
+<body>
+  <header class="banner">
+    <div>
+      <h1>BOOKS & MOVIES</h1>
+      <p>Mỗi trang sách là một cuộc đời - Mỗi thước phim là một hành trình</p>
+    </div>
+  </header>
+  <main class="container" style="padding: 4rem 0;">
+    <section style="margin-bottom: 3rem;">
+      <h2 class="section-title">Giới thiệu</h2>
+      <p style="font-size: 1.1rem; color: var(--muted); line-height: 1.6;">Nơi kết nối những tâm hồn yêu văn học và điện ảnh. Chúng mình cùng nhau đọc, cùng nhau xem và chia sẻ những góc nhìn đa chiều về cuộc sống thông qua các tác phẩm nghệ thuật.</p>
+    </section>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+      <section>
+        <h2 class="section-title">Hoạt động</h2>
+        <ul style="list-style: none;" class="activity-list">
+          <li>✔ Đọc sách & Review hàng tuần</li>
+          <li>✔ Buổi chiếu phim chuyên đề tháng</li>
+          <li>✔ Thảo luận (Talkshow) về các tác phẩm kinh điển</li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="section-title">Ban chủ nhiệm</h2>
+        <div style="display: flex; gap: 20px; text-align: center;">
+          <div><img src="../pic/sach_va_phim.jpg" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid #ff9800;"><p>Chủ nhiệm</p></div>
+          <div><img src="../pic/sach_va_phim.jpg" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid #ff9800;"><p>Phó chủ nhiệm</p></div>
+        </div>
+      </section>
+    </div>
+    <section style="margin-bottom: 3rem;">
+      <h2 class="section-title">Khoảnh khắc</h2>
+      <div class="pro-gallery" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+        <img src="../pic/sach_va_phim.jpg" style="width: 100%; border-radius: 10px; transition: 0.3s;">
+        <img src="../pic/sach_va_phim.jpg" style="width: 100%; border-radius: 10px; transition: 0.3s;">
+        <img src="../pic/sach_va_phim.jpg" style="width: 100%; border-radius: 10px; transition: 0.3s;">
+      </div>
+    </section>
+    <section style="margin-bottom: 3rem;">
+        <h2 class="section-title">Trailer / Review</h2>
+        <div class="video-container"><iframe style="width: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe></div>
+    </section>
+    <section class="registration-box">
+      <h2>Đăng ký thành viên</h2>
+      <form style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
+        <input type="text" placeholder="Họ và tên" style="padding: 12px; background: #000; border: 1px solid #444; color: #fff; border-radius: 8px;">
+        <input type="text" placeholder="Lớp" style="padding: 12px; background: #000; border: 1px solid #444; color: #fff; border-radius: 8px;">
+        <textarea placeholder="Cuốn sách hoặc bộ phim bạn yêu thích nhất?" style="padding: 12px; background: #000; border: 1px solid #444; color: #fff; border-radius: 8px;"></textarea>
+        <button type="submit" style="background: #ff9800; color: #fff; padding: 15px; border: none; border-radius: 8px; font-weight: 800; cursor: pointer;">GIA NHẬP ĐỘI MỌT SÁCH</button>
+      </form>
+    </section>
+    <section style="text-align: center; margin-top: 4rem; padding-bottom: 3rem;">
+      <h2 class="section-title" style="border: none; padding: 0; margin-bottom: 1.5rem;">Kết nối với chúng mình</h2>
+      <div class="contact-links">
+        <a href="#" class="contact-item">🔵 Facebook CLB</a>
+        <a href="#" class="contact-item">📸 Instagram</a>
+        <a href="mailto:clb.sachphim@hongai.edu.vn" class="contact-item">📧 clb.sachphim@hongai.edu.vn</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

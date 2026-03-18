@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>CLB Mỹ Thuật - THPT Hòn Gai</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .banner { height: 70vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('../pic/my_thuat.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; }
+    .banner h1 { font-size: 4rem; color: #fff; text-shadow: 0 0 15px #e91e63, 0 0 30px #2196f3; }
+    .section-title { color: #28f5f0; border-bottom: 2px solid #28f5f0; display: inline-block; margin-bottom: 20px; }
+    .activity-list li::before { content: '🎨'; margin-right: 15px; }
+    .pro-gallery img { border-radius: 50% 0 50% 0; transition: 0.6s; }
+    .pro-gallery img:hover { border-radius: 0; transform: rotate(3deg); box-shadow: 0 0 30px var(--secondary); }
+  </style>
+</head>
+<body>
+  <header class="banner"><div><h1>ART CLUB</h1><p style="color: #fff;">Vẽ nên ước mơ của bạn</p></div></header>
+  <main class="container" style="padding: 4rem 0;">
+    <section style="margin-bottom: 4rem;">
+      <h2 class="section-title">Giới thiệu</h2>
+      <p style="color: #eee;">Nơi những mảng màu giao thoa. CLB dành cho các bạn yêu thích hội họa, decor sự kiện và mong muốn lan tỏa cái đẹp qua những bức tranh.</p>
+    </section>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 4rem;">
+        <section>
+            <h2 class="section-title">Hoạt động</h2>
+            <ul style="list-style: none;" class="activity-list">
+                <li>✔ Vẽ tranh Canvas ngoài trời</li>
+                <li>✔ Hỗ trợ trang trí cho các sự kiện trường</li>
+                <li>✔ Học kỹ thuật vẽ sơn dầu, màu nước</li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="section-title">Sản phẩm</h2>
+            <div class="pro-gallery" style="display: flex; gap: 10px;"><img src="../pic/my_thuat.jpg" width="150"><img src="../pic/my_thuat.jpg" width="150"></div>
+        </section>
+    </div>
+    <section style="background: var(--card); padding: 3rem; border-radius: 30px; border: 2px dashed var(--secondary);">
+        <h2 style="color: var(--secondary); text-align: center;">Trở thành họa sĩ của Hòn Gai</h2>
+        <form style="margin-top: 20px; display: grid; gap: 15px;">
+            <input type="text" placeholder="Tên" style="padding: 10px; border-radius: 10px;">
+            <input type="text" placeholder="Lớp" style="padding: 10px; border-radius: 10px;">
+            <input type="text" placeholder="Phong cách vẽ yêu thích" style="padding: 10px; border-radius: 10px;">
+            <button style="padding: 15px; background: var(--secondary); color: #000; font-weight: 800; border: none; border-radius: 10px; cursor: pointer;">ĐĂNG KÝ NGAY</button>
+        </form>
+    </section>
+    <section style="text-align: center; margin-top: 4rem; padding-bottom: 3rem;">
+      <h2 class="section-title" style="border: none; padding: 0; margin-bottom: 1.5rem;">Kết nối với chúng mình</h2>
+      <div class="contact-links">
+        <a href="#" class="contact-item">🔵 Facebook CLB</a>
+        <a href="#" class="contact-item">📸 Instagram</a>
+        <a href="mailto:clb.mythuat@hongai.edu.vn" class="contact-item">📧 clb.mythuat@hongai.edu.vn</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

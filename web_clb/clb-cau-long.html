@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLB Cầu Lông - THPT Hòn Gai</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    .banner { height: 75vh; background: linear-gradient(rgba(7, 13, 36, 0.4), rgba(7, 13, 36, 0.7)), url('../pic/cau_long.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .banner h1 { font-size: clamp(3rem, 10vw, 5rem); color: #fff; text-transform: uppercase; text-shadow: 0 0 15px #f5d020, 0 0 30px #f5d020; letter-spacing: 3px; }
+    .banner p { font-size: 1.5rem; color: #fff; font-weight: 600; text-shadow: 0 0 10px #000; letter-spacing: 1px; }
+    .section-title { font-size: 2.2rem; margin-bottom: 2rem; color: #fff; border-left: 6px solid #f5d020; padding-left: 20px; }
+    .activity-list { list-style: none; }
+    .activity-list li { margin-bottom: 15px; font-size: 1.1rem; display: flex; align-items: center; }
+    .activity-list li::before { content: '🏸'; margin-right: 15px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; }
+    .gallery-item { border-radius: 15px; overflow: hidden; height: 250px; border: 1px solid rgba(255,255,255,0.1); }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+    .gallery-item:hover img { transform: scale(1.1) rotate(1deg); filter: brightness(1.2); }
+    .video-box { border-radius: 20px; overflow: hidden; border: 2px solid #f5d020; box-shadow: 0 0 20px rgba(245, 208, 32, 0.3); }
+    .video-box iframe { width: 100%; aspect-ratio: 16/9; display: block; }
+    .form-container { background: var(--card); padding: 3rem; border-radius: 25px; border: 1px solid rgba(255,255,255,0.1); }
+    input, textarea { width: 100%; padding: 12px; margin-top: 10px; background: rgba(255,255,255,0.05); border: 1px solid #444; border-radius: 10px; color: #fff; }
+    .btn-submit { width: 100%; padding: 15px; margin-top: 20px; background: #f5d020; color: #000; border: none; border-radius: 10px; font-weight: 800; cursor: pointer; transition: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <header class="banner">
+    <div>
+      <h1>BADMINTON CLUB</h1>
+      <p>Đập tan giới hạn - Làm chủ sân đấu</p>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 5rem 0;">
+    
+    <section style="margin-bottom: 5rem;">
+      <h2 class="section-title">Về chúng mình</h2>
+      <p style="font-size: 1.2rem; line-height: 1.8; color: var(--muted);">
+        CLB Cầu lông là nơi giao lưu của những bạn yêu thích bộ môn cầu lông tại trường Hòn Gai. 
+        Chúng mình hướng đến mục tiêu rèn luyện phản xạ, thể lực và tìm ra những đại diện xuất sắc cho các giải đấu cấp thành phố.
+      </p>
+    </section>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 5rem;">
+      <section>
+        <h2 class="section-title">Hoạt động chính</h2>
+        <ul class="activity-list">
+          <li>✔ Tập luyện kỹ thuật cơ bản & nâng cao</li>
+          <li>✔ Giao lưu nội bộ hàng tháng</li>
+          <li>✔ Tuyển chọn đội tuyển thi đấu giải trường</li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="section-title">Ban điều hành</h2>
+        <div style="display: flex; gap: 30px; text-align: center;">
+          <div><img src="../pic/cau_long.jpg" style="width: 120px; height: 120px; border-radius: 50%; border: 3px solid #f5d020;"><p>Chủ nhiệm</p></div>
+          <div><img src="../pic/cau_long.jpg" style="width: 120px; height: 120px; border-radius: 50%; border: 3px solid #f5d020;"><p>Phó chủ nhiệm</p></div>
+        </div>
+      </section>
+    </div>
+
+    <section style="margin-bottom: 5rem;">
+      <h2 class="section-title">Khoảnh khắc</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="../pic/cau_long.jpg"></div>
+        <div class="gallery-item"><img src="../pic/cau_long.jpg"></div>
+        <div class="gallery-item"><img src="../pic/cau_long.jpg"></div>
+      </div>
+    </section>
+
+    <section style="margin-bottom: 5rem;">
+      <h2 class="section-title">Video tập luyện</h2>
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/S2-S66_5Uu4" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="form-container">
+      <h2 style="color: #f5d020; margin-bottom: 1.5rem;">Gia nhập CLB Cầu Lông</h2>
+      <form>
+        <input type="text" placeholder="Họ và tên" required>
+        <input type="text" placeholder="Lớp" required>
+        <input type="text" placeholder="Số điện thoại / Link FB" required>
+        <textarea rows="4" placeholder="Kinh nghiệm chơi cầu lông của bạn?"></textarea>
+        <button type="submit" class="btn-submit">XÁC NHẬN ĐĂNG KÝ</button>
+      </form>
+    </section>
+<section style="text-align: center; margin-top: 4rem; padding-bottom: 3rem;">
+      <h2 class="section-title" style="border: none; padding: 0; margin-bottom: 1.5rem;">Kết nối với chúng mình</h2>
+      <div class="contact-links">
+        <a href="#" class="contact-item">🔵 Facebook CLB</a>
+        <a href="#" class="contact-item">📸 Instagram</a>
+        <a href="mailto:clb.caulong@hongai.edu.vn" class="contact-item">📧 clb.caulong@hongai.edu.vn</a>
+      </div>
+    </section>
+
+    <footer style="margin-top: 5rem; text-align: center;">
+      <p>FB: facebook.com/clbcaulonghongai | Email: caulong@hongai.edu.vn</p>
+      <p style="margin-top: 1rem;"><a href="../index.html" style="color: #f5d020;">← Quay lại Trang chủ</a></p>
+    </footer>
+  </main>
+</body>
+</html>

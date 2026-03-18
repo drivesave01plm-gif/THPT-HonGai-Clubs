@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLB Nghệ Thuật - THPT Hòn Gai</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    .banner { height: 70vh; background: linear-gradient(rgba(7, 13, 36, 0.4), rgba(7, 13, 36, 0.8)), url('../pic/nghe_thuat.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .banner h1 { font-size: clamp(3rem, 10vw, 5rem); color: #fff; text-transform: uppercase; text-shadow: 0 0 15px #ff4b8a, 0 0 30px #ff4b8a; letter-spacing: 5px; }
+    .banner p { font-size: 1.5rem; color: #ffeb3b; font-weight: 600; text-shadow: 0 0 10px rgba(0,0,0,0.5); }
+    .section-title { font-size: 2rem; margin-bottom: 1.5rem; color: #fff; border-left: 5px solid #ff4b8a; padding-left: 15px; }
+    .activity-list li::before { content: '💃'; margin-right: 15px; }
+    .pro-gallery img:hover { transform: scale(1.05) rotate(-2deg); box-shadow: 0 0 25px #ff4b8a; }
+    .registration-box { border: 1px solid #ff4b8a; background: rgba(255, 75, 138, 0.05); padding: 2rem; border-radius: 20px; }
+  </style>
+</head>
+<body>
+  <header class="banner">
+    <div>
+      <h1>PERFORMING ARTS</h1>
+      <p>Tỏa sáng đam mê - Khẳng định cá tính</p>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 4rem 0;">
+    <section style="margin-bottom: 4rem;">
+      <h2 class="section-title">Giới thiệu</h2>
+      <p style="font-size: 1.2rem; color: var(--muted);">
+        Ngôi nhà của những tài năng âm nhạc và vũ đạo. Chúng mình không chỉ tập luyện mà còn là đội ngũ nòng cốt tham gia biểu diễn tại các ngày lễ lớn và cuộc thi cấp tỉnh.
+      </p>
+    </section>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 4rem;">
+      <section>
+        <h2 class="section-title">Hoạt động</h2>
+        <ul style="list-style: none;" class="activity-list">
+          <li style="margin-bottom: 10px;">✔ Sinh hoạt chuyên môn: Thanh nhạc & Vũ đạo</li>
+          <li style="margin-bottom: 10px;">✔ Biểu diễn tại Lễ khai giảng, 20/11, 26/3</li>
+          <li style="margin-bottom: 10px;">✔ Tham gia Giai điệu tuổi hồng các cấp</li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="section-title">Gương mặt tiêu biểu</h2>
+        <div style="display: flex; gap: 20px; text-align: center;">
+          <div><img src="../pic/nghe_thuat.jpg" style="width: 100px; height: 100px; border-radius: 10px; border: 2px solid #ff4b8a;"><p>Chủ nhiệm</p></div>
+          <div><img src="../pic/nghe_thuat.jpg" style="width: 100px; height: 100px; border-radius: 10px; border: 2px solid #ff4b8a;"><p>Phó chủ nhiệm</p></div>
+        </div>
+      </section>
+    </div>
+
+    <section class="registration-box">
+      <h2 style="color: #ff4b8a;">Đơn Đăng Ký Audition</h2>
+      <form style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
+        <input type="text" placeholder="Họ và tên" required
+      style="padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(120,170,255,0.3); border-radius: 10px; color: #fff;">
+    
+    <input type="text" placeholder="Lớp" required
+      style="padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(120,170,255,0.3); border-radius: 10px; color: #fff;">
+  </div>
+
+  <input type="text" placeholder="Số điện thoại / Facebook" required
+    style="width: 100%; padding: 12px; margin-top: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(120,170,255,0.3); border-radius: 10px; color: #fff;">
+        <input type="text" placeholder="Bạn muốn tham gia ban: Hát / Nhảy / Nhạc cụ?" style="padding: 10px; border-radius: 5px; background: rgba(255,255,255,0.05); border: 1px solid rgba(120,170,255,0.3); border-radius: 10px; color: #fff;">
+        <button type="submit" style="background: #ff4b8a; color: #fff; padding: 15px; font-weight: 800; border: none; border-radius: 10px; cursor: pointer;">GIA NHẬP NGAY</button>
+      </form>
+    </section>
+    <section style="text-align: center; margin-top: 4rem; padding-bottom: 3rem;">
+      <h2 class="section-title" style="border: none; padding: 0; margin-bottom: 1.5rem;">Kết nối với chúng mình</h2>
+      <div class="contact-links">
+        <a href="#" class="contact-item">🔵 Facebook CLB</a>
+        <a href="#" class="contact-item">📸 Instagram</a>
+        <a href="mailto:clb.nghethuat@hongai.edu.vn" class="contact-item">📧 clb.nghethuat@hongai.edu.vn</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

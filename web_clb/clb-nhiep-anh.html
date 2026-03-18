@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLB Nhiếp Ảnh - THPT Hòn Gai</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    /* Tùy chỉnh màu sắc riêng cho CLB Nhiếp Ảnh */
+    :root {
+      --photo-primary: #ff9f43; /* Màu cam nghệ thuật */
+      --photo-secondary: #feca57;
+    }
+
+    .banner {
+      height: 75vh;
+      background: linear-gradient(rgba(10, 20, 50, 0.4), rgba(7, 13, 36, 0.8)), 
+                  url('../pic/nhiep_anh.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* Hiệu ứng Glow chữ sáng rực */
+    .banner h1 {
+      font-size: clamp(3rem, 10vw, 5rem);
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 5px;
+      margin-bottom: 10px;
+      text-shadow: 
+        0 0 10px var(--photo-primary),
+        0 0 30px var(--photo-primary),
+        0 0 50px rgba(255, 159, 67, 0.5);
+    }
+
+    .banner p {
+      font-size: 1.5rem;
+      color: var(--photo-secondary);
+      font-weight: 600;
+      text-shadow: 0 0 10px rgba(254, 202, 87, 0.8);
+      letter-spacing: 2px;
+    }
+
+    .section { padding: 4rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .section-title { 
+      font-size: 2.2rem; 
+      margin-bottom: 2rem; 
+      color: #fff; 
+      border-left: 6px solid var(--photo-primary); 
+      padding-left: 20px; 
+    }
+
+    /* Hoạt động chính */
+    .activity-list { list-style: none; }
+    .activity-list li {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    .activity-list li::before {
+      content: '📸';
+      margin-right: 15px;
+      font-size: 1.2rem;
+    }
+
+    /* Ban chủ nhiệm */
+    .bcn-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
+    .bcn-card { text-align: center; background: var(--card); padding: 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); }
+    .bcn-card img { width: 140px; height: 140px; border-radius: 20px; object-fit: cover; border: 3px solid var(--photo-primary); margin-bottom: 1rem; }
+
+    /* Gallery chuyên nghiệp */
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; }
+    .gallery-item { border-radius: 15px; overflow: hidden; height: 220px; border: 1px solid rgba(255,255,255,0.1); }
+    .gallery-item img { 
+        width: 100%; height: 100%; object-fit: cover; 
+        transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1); 
+    }
+    .gallery-item:hover img { transform: scale(1.1); filter: brightness(1.1); }
+
+    /* Video & Form */
+    .video-box { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 20px; overflow: hidden; }
+    .video-box iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    
+    .form-container { max-width: 700px; margin: 0 auto; background: var(--card); padding: 2.5rem; border-radius: 25px; border: 1px solid var(--photo-primary); }
+    input, textarea { width: 100%; padding: 12px; margin-top: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: #fff; }
+    .btn-submit { width: 100%; padding: 15px; margin-top: 20px; background: var(--photo-primary); color: #fff; border: none; border-radius: 10px; font-weight: 800; cursor: pointer; transition: 0.3s; }
+    .btn-submit:hover { box-shadow: 0 0 20px var(--photo-primary); }
+  </style>
+</head>
+<body>
+
+  <header class="banner">
+    <div>
+      <h1>CLB NHIẾP ẢNH</h1>
+      <p>Lưu giữ khoảnh khắc - Viết tiếp câu chuyện</p>
+    </div>
+  </header>
+
+  <div class="container">
+    
+    <section class="section">
+      <h2 class="section-title">Giới thiệu</h2>
+      <p style="font-size: 1.2rem; color: var(--muted); line-height: 1.8;">
+        Nơi hội tụ những tâm hồn nghệ sĩ đam mê ánh sáng và khung hình. 
+        Dành cho tất cả học sinh muốn khám phá thế giới qua ống kính máy ảnh hoặc điện thoại. 
+        Mục tiêu của chúng mình là trau dồi kỹ năng tư duy hình ảnh và lưu lại những kỷ niệm đẹp nhất của tuổi học trò.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Hoạt động chính</h2>
+      <ul class="activity-list">
+        <li>✔ Workshop hướng dẫn kỹ thuật chụp và hậu kỳ (Lightroom/Photoshop)</li>
+        <li>✔ Photo-walk: Khám phá vẻ đẹp Hạ Long hàng tháng</li>
+        <li>✔ Đội ngũ tác nghiệp chính trong các sự kiện lớn của trường</li>
+        <li>✔ Tổ chức triển lãm ảnh học đường thường niên</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Ban điều hành</h2>
+      <div class="bcn-grid">
+        <div class="bcn-card">
+          <img src="../pic/nhiep_anh.jpg" alt="Chủ nhiệm">
+          <h3>Lê Quang Huy</h3>
+          <p style="color: var(--photo-secondary)">Chủ nhiệm (12A5)</p>
+        </div>
+        <div class="bcn-card">
+          <img src="../pic/nhiep_anh.jpg" alt="Phó chủ nhiệm">
+          <h3>Phạm Minh Ngọc</h3>
+          <p style="color: var(--photo-secondary)">Phó chủ nhiệm (11B2)</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Tác phẩm nổi bật</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="../pic/nhiep_anh.jpg"></div>
+        <div class="gallery-item"><img src="../pic/nhiep_anh.jpg"></div>
+        <div class="gallery-item"><img src="../pic/nhiep_anh.jpg"></div>
+        <div class="gallery-item"><img src="../pic/nhiep_anh.jpg"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Video Behind The Scenes</h2>
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="section" id="register">
+      <h2 class="section-title">Trở thành nhiếp ảnh gia</h2>
+      <div class="form-container">
+        <form action="#">
+          <input type="text" placeholder="Họ và tên" required>
+          <input type="text" placeholder="Lớp" required>
+          <input type="text" placeholder="Facebook / Zalo liên hệ" required>
+          <textarea rows="4" placeholder="Bạn đang sử dụng thiết bị gì? (Máy ảnh/Điện thoại) và lý do tham gia..."></textarea>
+          <button type="submit" class="btn-submit">GỬI ĐƠN GIA NHẬP</button>
+        </form>
+      </div>
+    </section>
+    <section style="text-align: center; margin-top: 4rem; padding-bottom: 3rem;">
+      <h2 class="section-title" style="border: none; padding: 0; margin-bottom: 1.5rem;">Kết nối với chúng mình</h2>
+      <div class="contact-links">
+        <a href="#" class="contact-item">🔵 Facebook CLB</a>
+        <a href="#" class="contact-item">📸 Instagram</a>
+        <a href="mailto:clb.nhiep_anh@hongai.edu.vn" class="contact-item">📧 clb.nhiep_anh@hongai.edu.vn</a>
+      </div>
+    </section>
+
+
+  </div>
+</body>
+</html>
